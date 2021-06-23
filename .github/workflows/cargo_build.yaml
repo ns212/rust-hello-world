@@ -35,6 +35,11 @@ jobs:
         with:
           command: check
           args: --release --workspace --target=${{ matrix.target }}
+      - name: check
+        uses: actions-rs/cargo@v1
+        with:
+          command: build
+          args: --release --workspace --target=${{ matrix.target }}
       # - uses: actions-rs/cargo@v1
       #   with:
       #     use-cross: true
