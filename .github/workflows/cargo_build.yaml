@@ -41,6 +41,7 @@ jobs:
         uses: actions-rs/cargo@v1
         with:
           command: build
+          use-cross: true
           args: --release --workspace --target=${{ matrix.target }}
       # - uses: actions-rs/cargo@v1
       #   with:
