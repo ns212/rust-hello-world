@@ -24,6 +24,12 @@ jobs:
           toolchain: stable
           target: ${{ matrix.target }}
           override: true
+      - run: rustup component add rustfmt
+      - name: fmt
+        uses: actions-rs/cargo@v1
+        with:
+          command: fmt
+          args: --all -- --check
       # - uses: actions-rs/cargo@v1
       #   with:
       #     use-cross: true
