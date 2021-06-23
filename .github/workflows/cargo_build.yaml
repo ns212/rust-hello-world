@@ -5,7 +5,8 @@ name: CI
 jobs:
   check:
     name: Build
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux]
+    # runs-on: ubuntu-latest
 
     # Cross-compile
     # Supported targets: https://doc.rust-lang.org/nightly/rustc/platform-support.html
