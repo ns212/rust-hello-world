@@ -29,12 +29,14 @@ jobs:
         uses: actions-rs/cargo@v1
         with:
           command: fmt
+          use-cross: true
           args: --all -- --check
 
       - name: check
         uses: actions-rs/cargo@v1
         with:
           command: check
+          use-cross: true
           args: --release --workspace --target=${{ matrix.target }}
 
       - name: build
