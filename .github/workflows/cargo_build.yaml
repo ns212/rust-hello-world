@@ -30,6 +30,7 @@ jobs:
         uses: actions-rs/cargo@v1
         with:
           command: check
+          toolchain: stable
           use-cross: true
           args: --release --workspace --target=${{ matrix.target }}
 
@@ -37,6 +38,7 @@ jobs:
         uses: actions-rs/cargo@v1
         with:
           command: build
+          toolchain: stable
           use-cross: true
           args: --release --workspace --target=${{ matrix.target }}
       # - uses: actions-rs/cargo@v1
