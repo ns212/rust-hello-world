@@ -15,7 +15,7 @@ jobs:
         target:
           - x86_64-unknown-linux-gnu # 64-bit Linux (kernel 2.6.32+, glibc 2.11+)
           - x86_64-pc-windows-gnu # 64-bit MinGW (Windows 7+)
-          # - x86_64-apple-darwin # 64-bit macOS (10.7+, Lion+)
+          - x86_64-apple-darwin # 64-bit macOS (10.7+, Lion+)
 
     steps:
       - uses: actions/checkout@v2
