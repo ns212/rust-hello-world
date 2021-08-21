@@ -57,10 +57,9 @@ jobs:
         with:
           endpoint: builders
 
-
-      -
-        name: Available platforms
+      - name: Available platforms
         run: echo ${{ steps.buildx.outputs.platforms }}
+      - run: docker manifest --help
 
             # - uses: actions-rs/cargo@v1
       #   with:
