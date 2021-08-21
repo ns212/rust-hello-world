@@ -39,6 +39,14 @@ jobs:
         #          use-cross: true
         #          args: --release --workspace --target=${{ matrix.target }}
 
+      -
+        name: Set up QEMU
+        id: qemu
+        uses: docker/setup-qemu-action@v1
+      -
+        name: Available platforms
+        run: echo ${{ steps.qemu.outputs.platforms }}
+
       - name: Setup docker context for buildx
         id: buildx-context
         run: |
